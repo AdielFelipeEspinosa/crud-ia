@@ -5,7 +5,6 @@ const autorController = require('./autorController');
 const path = require('path'); // Importar el módulo path
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 
 // Middleware para parsear el cuerpo de las peticiones a JSON
 app.use(express.json());
@@ -45,6 +44,8 @@ app.put('/api/autores/:id', autorController.actualizarAutor);
 app.delete('/api/autores/:id', autorController.eliminarAutor);
 
 // Inicializar el servidor
-app.listen(PORT, () => {
-    console.log(`🚀 Servidor API REST escuchando en http://localhost:${PORT}`);
+// Inicializar el servidor
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Servidor API REST escuchando en el puerto ${PORT}`);
 });
