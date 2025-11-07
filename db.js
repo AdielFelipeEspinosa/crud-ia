@@ -5,9 +5,9 @@ require("dotenv").config(); // Carga variables desde .env (opcional pero recomen
 
 // Configuración del pool de conexión a la base de datos PostgreSQL
 const pool = new Pool({
-  host: process.env.DB_HOST || "localhost",
-  user: process.env.DB_USER || "postgres",
-  password: process.env.DB_PASSWORD || "root",
+  host: process.env.DB_HOST || "dpg-d476o8chg0os73ffo560-a.oregon-postgres.render.com",
+  user: process.env.DB_USER || "ia_crud_user",
+  password: process.env.DB_PASSWORD || "qkVCuEdEu8bJYNfJQkxChmfhXzYkQSC8",
   database: process.env.DB_NAME || "ia_crud",
   port: process.env.DB_PORT || 5432,
   ssl: {
